@@ -1,5 +1,17 @@
 # PluginKIT-For-AGK
-This repository contains files of the DBP 2DPluginKIT and eXtends plugins port for AppGameKIT.
+This repository contains files of the DarkBASIC Professional 2DPluginKIT and eXtends plugins port for AppGameKIT.
+This version is improved in many ways to fit AppGameKit system and structures.
+
+# Installation 
+Simply copy the whole repository in a folder of your hard-drive (choose a place where AppGameKit are right to read & write)
+The project is organized in a way to avoid the duplication of the plugin files. If you use it in your project, you will probably have to put the PluginKIT files folders 2DPluginKIT_v2, dbEmulation_v1, eXtends_v2 and javaEmulation_v1 in the same folder than your project. In that case, simply update the 'import' by removing the '../../' at their beginning.
+
+# Version/Release notes
+The project is not yet finished. It is provided for tests. The licence apply with this alpha version too.
+- The HELP documentation is not yet finished (the web view uses BootStrap v4)
+- The HELP inside the pluginkit files are not yet finished
+- Some samples from 2DPluginKIT are missing and will be added soonly
+- Some improvements are planed to makes the pluginKIT even better than it currently is.
 
 # Licence
 By downloading "PluginKIT-for-AGK" you agree the following licence terms :
@@ -15,5 +27,6 @@ By downloading "PluginKIT-for-AGK" you agree the following licence terms :
 You can report bugs/issues/improvements requests directly using the 'Issues" page of the original PluginKIT-For-AGK repository : https://github.com/AmiDARK/PluginKIT-For-AGK/issues
 
 # Donationware
-This product is released under the DonationWare principles. That mean you don't have to pay to use it but, you can makes a donation to the author using paypal to the paypal account : cordierfr(at)wanadoo(dot)fr
-It will be appreciated.
+This product is released under the DonationWare principle.
+That mean you don't have to pay to use it but, you can makes a donation to the author using paypal by sending him a gift directly to his paypal account : cordierfr(at)wanadoo(dot)fr
+It will be greatly appreciated and will motivate me for planed improvements and more.
