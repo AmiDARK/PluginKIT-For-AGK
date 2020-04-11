@@ -142,6 +142,10 @@ For YLoop = 0 to 14
 		PKSetLayerTile( LayerID1, XLoop, YLoop, readVal -1 )
 	Next XLoop
 Next YLoop
+PKSetLayerUVMode( LayerID1, 0, 0 )
+PKSetLayerScrollSpeedXY( LayerID1, 0.025, 0.0 )
+PKSetLayerArea( LayerID1, 0, 64, 640, 480 )
+PKSetLayerScrollMode( LayerID1, 2 )
 
 // Create the 2nd layer for bonuses
 BonusLayer As Integer = -1
@@ -174,6 +178,10 @@ For YLoop = 0 to 14
 		Endif
 	Next XLoop
 Next YLoop
+PKSetLayerUVMode( BonusLayer, 0, 0 )
+PKSetLayerScrollSpeedXY( BonusLayer, 0.025, 0.0 )
+PKSetLayerArea( BonusLayer, 0, 64, 640, 480 )
+PKSetGameLayer( BonusLayer )
 
 // Create the 3rd layer for bridges view
 EffectLayer As Integer = -1
@@ -205,6 +213,10 @@ For YLoop = 0 to 14
 		Endif
 	Next XLoop
 Next YLoop
+PKSetLayerUVMode( EffectLayer, 0, 0 )
+PKSetLayerScrollSpeedXY( EffectLayer, 0.025, 0.0 )
+PKSetLayerArea( EffectLayer, 0, 64, 640, 480 )
+PKSetLayerScrollMode( EffectLayer, 2 )
 
 // Load the player blitter object
 PlayerID As Integer

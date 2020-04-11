@@ -176,7 +176,6 @@ Function PKLoadBlitterObjectEx3( FileNAMESTR As String, TilesXCount As Integer, 
 	IMAGEID As Integer
 	BlitterID As Integer
 	IMAGEID = LoadImage( FileNAMESTR )
-	DebugMessage( " Image " + FileNAMESTR + " loaded at slot #" + Str( IMAGEID ) )
 	BlitterID = PKAddBlitterObjectEx3( IMAGEID, TilesXCount, TilesYCount, TransparencyFLAG )
 	Bobs[ BlitterID ].Transparency = TransparencyFLAG
 	// Bobs[ BlitterID ].EXTLoaded = 2
@@ -628,10 +627,10 @@ function internalPKDrawLayerBobs( LayerID As Integer, XS As Integer, YS As Integ
 		DisplayWIDTH As Integer : DisplayWIDTH = XE - XS 
 		DisplayHEIGHT As Integer : DisplayHEIGHT = YE - YS
 		//  Calcul des 4 extrémités pour l'affichage des lumières.
-		DispLEFT As Integer : DispLEFT = PKLayer[ LayerID ].XDisplay
-		DispTOP As Integer : DispTOP = PKLayer[ LayerID ].YDisplay
-		DispRIGHT As Integer : DispRIGHT = PKLayer[ LayerID ].XDisplay + DisplayWIDTH
-		DispBOTTOM As Integer : DispBOTTOM = PKLayer[ LayerID ].YDisplay + DisplayHEIGHT
+		DispLEFT As Integer : DispLEFT = XDisplay // PKLayer[ LayerID ].XDisplay
+		DispTOP As Integer : DispTOP = YDisplay // PKLayer[ LayerID ].YDisplay
+		DispRIGHT As Integer : DispRIGHT = XDisplay + DisplayWIDTH // PKLayer[ LayerID ].XDisplay + DisplayWIDTH
+		DispBOTTOM As Integer : DispBOTTOM = YDisplay + DisplayHEIGHT // PKLayer[ LayerID ].YDisplay + DisplayHEIGHT
 		InPOS As Integer
 		for InPos = 0 to PKLayer[ LayerID ].PKLayersBobs.length Step 1
 			CurrentBOB As Integer
@@ -639,8 +638,8 @@ function internalPKDrawLayerBobs( LayerID As Integer, XS As Integer, YS As Integ
 //			CurrentBOB = PKLayer[ LayerID ].PKLayersBobs[ InPos ].ObjectID
 			If PKGetBobExists( CurrentBOB ) = TRUE 
 				if Bobs[ CurrentBob ].Active = TRUE And Bobs[ CurrentBob ].Hide = 0
-					XBob As Integer : XBob = Bobs[ CurrentBob ].XPos - XDisplay - PKLayer[ LayerID ].TileWidth
-					YBob As Integer : YBob = Bobs[ CurrentBob ].YPos - YDisplay - PKLayer[ LayerID ].TileHeight
+					XBob As Integer : XBob = Bobs[ CurrentBob ].XPos - XDisplay + XS
+					YBob As Integer : YBob = Bobs[ CurrentBob ].YPos - YDisplay + YS
 					If XBob > 0 - Bobs[ CurrentBob ].Width And XBob < ( XE - XS ) + Bobs[ CurrentBob ].Width
 						If YBob > 0 - Bobs[ CurrentBob ].Height And YBob < ( YE - YS ) + Bobs[ CurrentBob ].Height
 							internalPKDrawBOB( CurrentBOB, XBob, YBob, FALSE, FALSE )
