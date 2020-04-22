@@ -1,0 +1,12 @@
+2020.04.22
+- Fixed small issue in graphics concerning 2D Virtual lighting shadow ghosting effect.
+- Removed Classic commands that is obsolete on Studio.
+- Added PKSetup.isStudio set to TRUE per default for compatible Layers display. if FALSE better accurate is done on AppGameKit Classics.
+- Started development on MagicMenu system (incomplete)
+
+2020.04.11
+- Fixed issue in Labyrinthe demonstration (updated demo source code)
+- Fixed issue in Bob-To-Layer render, by updating it with newer custom SetScissor system for layers
+- Fixed issue in eXtends Real-Time Sky System model 3 (sun halo flickering).
+- Removed a 2D Bob loading debug message
+- Updated projects sources codes links to PluginKIT system files.

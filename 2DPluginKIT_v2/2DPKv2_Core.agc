@@ -28,6 +28,7 @@ Function PKFullUpdate( WithSync As Integer )
 	dbRefresh()          // Call other refresh (dbPrint)
 	PKSetup.rZoom = FALSE
 	if WithSync = TRUE then Sync()
+
 EndFunction
 
 Function DebugMessage( MessageToOutput As String )

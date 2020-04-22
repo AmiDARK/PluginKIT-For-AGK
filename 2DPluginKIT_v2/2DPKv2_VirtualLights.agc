@@ -482,11 +482,12 @@ Function PKUpdateVirtual2DLight( LightID As Integer )
 								Endif
 							Next ZLoop
 						Endif
+						/* 2020.04.22 HOT Fix to remove small artefacts in shadows places of a virtual Light */
 						If SHADOW = TRUE
-							NewRED = NewRED / 8
-							NewGREEN = NewGREEN / 8
-							NewBLUE = NewBLUE / 8
-							Alfa = Alfa / 3
+							NewRED = 0
+							NewGREEN = 0
+							NewBLUE = 0
+							Alfa = 0
 						Endif
 					Endif
 
@@ -565,11 +566,11 @@ Function PKUpdateVirtual2DLight( LightID As Integer )
 		// 9.1.4 Final color Image
 		if GetMemblockExists( IMGMBC ) = TRUE
 			FinalImage = CreateImageFromMemblock( IMGMBC )
-			SaveImage( FinalImage, "pklightmaps/" + PKLayer[ P2DLights[ LightID ].LayerID ].Name + "_" + P2DLights[ LightID ].Name + "_lightMapping.png" )
+			SaveImage( FinalImage, "raw:" + PKSetup.OutputPATH + "media/pklightmaps/" + PKLayer[ P2DLights[ LightID ].LayerID ].Name + "_" + P2DLights[ LightID ].Name + "_lightMapping.png" )
 		Endif
 
 		// Save the image informations data there.
-		fileID = OpenToWrite( "raw:" + GetReadPath() + "media/pklightmaps/" + PKLayer[ P2DLights[ LightID ].LayerID ].Name + "_" + P2DLights[ LightID ].Name + "_lightMapping.dat" )
+		fileID = OpenToWrite( "raw:" + PKSetup.OutputPATH + "media/pklightmaps/" + PKLayer[ P2DLights[ LightID ].LayerID ].Name + "_" + P2DLights[ LightID ].Name + "_lightMapping.dat" )
 			saveLightToFile( fileID, LightID )
 		CloseFile( fileID ) : FileID = -1
 

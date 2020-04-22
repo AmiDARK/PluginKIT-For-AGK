@@ -18,10 +18,12 @@
 
 Type PKSetup_Type
 	// ******************** System Parameters
+	isStudio As Integer
 	DebugMode As Integer
 	LowMemoryMode As Integer
 	DynamicDeletion As Integer
 	OutputPATH As String
+	RawFolder As Integer
 	// ******************** System Timer variables
 	PreviousTimer As Float                                   // Timer de début de mesures
 	NewTimer As Float                                        // Timer de fin de mesure (qui sera envoyé au PreviousTimer pour la prochaine mesure)
@@ -61,10 +63,11 @@ Type PKSetup_Type
 EndType
 Global PKSetup As PKSetup_Type                               // Création des données réelles
 // ******************** 
+PKSetup.isStudio = TRUE
 PKSetup.DebugMode = TRUE                                     // Le mode debug est activé par défaut.
 PKSetup.LowMemoryMode = FALSE                                // Si activé à 1, supprime les images de MASQUE et de NORMAL MAPPING une fois le MEMBLOCK associété mis à jour avec les informations de l'image.
 PKSetup.OutputPATH = GetReadPath()
-SetRawWritePath( PKSetup.OutputPATH )                        // 2020.04.05 To output LightMaps images inside %PROJECT%/media/pklightmaps/
+// PKSetup.RawFolder = OpenRawFolder( PKSetup.OutputPATH )      // 2020.04.05 To output LightMaps images inside %PROJECT%/media/pklightmaps/
 PKSetup.rZoom = FALSE
 PKSetup.zFactor = 1.0
 

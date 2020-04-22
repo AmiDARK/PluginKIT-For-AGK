@@ -146,7 +146,7 @@ UpKey As Integer : DownKey As Integer
 LeftKey As Integer : RightKey As Integer
 
 do 
-	ClearScreen()
+//	ClearScreen()
 	dbSetCursor( 0, 0 )
 	dbPrint( "FPS=" + Str( ScreenFPS() ) )
 	// UpKey = GetRawKeyState( 38 )
@@ -248,9 +248,9 @@ Function PrepareV2DLights()
 	PKForceVirtualLightRefresh()
 	LightID1 = PKAddVirtual2DLight( "Flame1", 80, 378, dbRgbA( 0, 255, 255 ), 100, 128, FrontLayer, FALSE, FALSE, TRUE )
 	PKSetVirtual2DLightAsStaticLight( LightID1 )
-	LightID2 = PKAddVirtual2DLight( "Flame2", 208+32, 378, dbRgbA( 255, 0, 255 ), 100, 128, FrontLayer, FALSE, TRUE, FALSE )
+	LightID2 = PKAddVirtual2DLight( "Flame2", 208+32, 378, dbRgbA( 255, 0, 255 ), 100, 128, FrontLayer, FALSE, TRUE, TRUE )
 	PKSetVirtual2DLightAsPulseLight( LightID2 )
-	LightID3 = PKAddVirtual2DLight( "Flame3", 368+32, 378, dbRgbA( 128, 255, 128 ), 100, 128, FrontLayer, TRUE, TRUE, FALSE )
+	LightID3 = PKAddVirtual2DLight( "Flame3", 368+32, 378, dbRgbA( 128, 255, 128 ), 100, 128, FrontLayer, TRUE, TRUE, TRUE )
 	PKSetVirtual2DLightAsFlashLight( LightID3 ) 
 	LightID4 = PKAddVirtual2DLight( "Flame4", 528+32, 378, dbRGBA( 255, 255, 0 ), 100, 129, FrontLayer, TRUE, TRUE, TRUE ) // Normal/Shadow/Bright
 	PKSetVirtual2DLightAsFlameLight( LightID4 )

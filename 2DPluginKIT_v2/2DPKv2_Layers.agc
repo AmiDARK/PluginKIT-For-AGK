@@ -344,7 +344,7 @@ Function PKTraceLayerEx( LayerID As Integer, X0 As Integer, Y0 As Integer, X1 As
 			If X1 = 0 Then X1 = PKSetup.vWidth   // getBitmapWidth() + ...
 			If Y1 = 0 Then Y1 = PKSetup.vHeight // getBitmapHeight() + ...
 			// Recalculate Scissor depending on true window size
-			advSetScissor( X0, Y0, X1, Y1 )
+			if PKSetup.isStudio = FALSE Then advSetScissor( X0, Y0, X1, Y1 )
 			// Read screen sizes to calculate drawing area
 			XCount As Integer : XCount = ( X1 - X0 ) / PKLayer[ LayerID ].TileWidth
 			YCount As Integer : YCount = ( Y1 - Y0 ) / PKLayer[ LayerID ].TileHeight
@@ -375,7 +375,7 @@ Function PKTraceLayerEx( LayerID As Integer, X0 As Integer, Y0 As Integer, X1 As
 			internalPKDrawLayerParticles( LayerID, X0, Y0, X1, Y1, XDisplay, YDisplay )
 			internalPKDrawLayerBobs( LayerID, X0, Y0, X1, Y1, XDisplay, YDisplay )
 			Render2DFront()
-			advSetScissor( 0, 0, 0, 0 )
+			if PKSetup.isStudio = FALSE Then advSetScissor( 0, 0, 0, 0 )
 		Endif
 	Else
 		CastError( "2DPKv2_Layers/PKTraceLayerex : The Specified layer does not exist" )
