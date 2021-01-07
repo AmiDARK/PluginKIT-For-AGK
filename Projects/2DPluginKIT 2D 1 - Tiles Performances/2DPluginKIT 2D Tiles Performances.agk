@@ -49,7 +49,6 @@ dynamic_memory=0
 output_path=
 
 [projectfiles]
-[projectfiles]
 FILE_0=..%2F..%2F2DPluginKIT_v2%2F2DPKv2_Animations.agc;-1
 FILE_1=..%2F..%2F2DPluginKIT_v2%2F2DPKv2_BlitterObjects.agc;-1
 FILE_2=..%2F..%2F2DPluginKIT_v2%2F2DPKv2_Core.agc;-1
@@ -84,7 +83,8 @@ FILE_30=..%2F..%2FeXtends_v2%2FXTv2_XGadgets.agc;-1
 FILE_31=..%2F..%2FeXtends_v2%2FXTv2_XWindows.agc;-1
 
 [files]
-FILE_NAME_0=1;main.agc;3167;0
+FILE_NAME_0=1;..%2F..%2F2DPluginKIT_v2%2F2DPKv2_Layers.agc;2;1
+FILE_NAME_1=0;main.agc;3226;0
 
 [project]
 description=

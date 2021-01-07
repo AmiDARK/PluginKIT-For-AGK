@@ -50,9 +50,6 @@ output_path=
 
 [projectfiles]
 FILE_0=main.agc;-1
-
-[files]
-[projectfiles]
 FILE_0=..%2F..%2F2DPluginKIT_v2%2F2DPKv2_Animations.agc;-1
 FILE_1=..%2F..%2F2DPluginKIT_v2%2F2DPKv2_BlitterObjects.agc;-1
 FILE_2=..%2F..%2F2DPluginKIT_v2%2F2DPKv2_Core.agc;-1
@@ -85,6 +82,8 @@ FILE_28=..%2F..%2FeXtends_v2%2FXTv2_XBitmaps.agc;-1
 FILE_29=..%2F..%2FeXtends_v2%2FXTv2_XFonts.agc;-1
 FILE_30=..%2F..%2FeXtends_v2%2FXTv2_XGadgets.agc;-1
 FILE_31=..%2F..%2FeXtends_v2%2FXTv2_XWindows.agc;-1
+
+[files]
 
 [project]
 description=

@@ -54,11 +54,11 @@ SetErrorMode(2)
 
 // set window properties
 SetWindowTitle( "eXtends" )
-SetWindowSize( 640, 480, 0 )
+SetWindowSize( 1920, 1080, 0 )
 SetWindowAllowResize( 1 ) // allow the user to resize the window
 
 // set display properties
-SetVirtualResolution( 640, 480 ) // doesn't have to match the window
+SetVirtualResolution( 1920, 1080 ) // doesn't have to match the window
 SetOrientationAllowed( 1, 1, 1, 1 ) // allow both portrait and landscape on mobile devices
 SetSyncRate( 60, 0 ) // 60fps on computer
 SetScissor( 0,0,0,0 ) // use the maximum available screen space, no black borders
@@ -116,9 +116,10 @@ if InitializedRTS = TRUE
 		SetCameraRotation( 1, XAngle , YAngle, 0 )
 		XTRTSUpdate()
 		dbSetCursor( 0 , 0 )
-		dbPrint( "Frame Rate : " + str( ScreenFps() ) )
-		dbPrint( "Clock : " + Str( Round( XTGetRTSHour() ) ) + "h" + Str( Round( XTGetRTSMinutes() ) ) + "m" + Str( Round( XTGetRTSSecunds() ) ) + "s" )
-		dbPrint( "VIew Angle = " + Str( YAngle ) )
+		dbPrint( "  " )
+		rem dbPrint( "Frame Rate : " + str( ScreenFps() ) )
+		rem dbPrint( "Clock : " + Str( Round( XTGetRTSHour() ) ) + "h" + Str( Round( XTGetRTSMinutes() ) ) + "m" + Str( Round( XTGetRTSSecunds() ) ) + "s" )
+		rem dbPrint( "VIew Angle = " + Str( YAngle ) )
 		dbRefresh()
 		Sync()
 	loop

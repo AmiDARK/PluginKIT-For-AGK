@@ -43,6 +43,8 @@ splash_960_path=
 splash_2048_path=
 splash_1136_path=
 prov_profile_path=
+splash_logo=
+splash_color=
 
 [html5_settings]
 commands_used=0
@@ -84,7 +86,7 @@ FILE_30=..%2F..%2FeXtends_v2%2FXTv2_XGadgets.agc;-1
 FILE_31=..%2F..%2FeXtends_v2%2FXTv2_XWindows.agc;-1
 
 [files]
-FILE_NAME_0=1;main.agc;1846;0
+FILE_NAME_0=0;main.agc;1846;0
 
 [project]
 description=
