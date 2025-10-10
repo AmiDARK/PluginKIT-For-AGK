@@ -25,8 +25,3 @@ By downloading "PluginKIT-for-AGK" you agree the following licence terms :
 
 # Bug reports
 You can report bugs/issues/improvements requests directly using the 'Issues" page of the original PluginKIT-For-AGK repository : https://github.com/AmiDARK/PluginKIT-For-AGK/issues
-
-# Donationware
-This product is released under the DonationWare principle.
-That mean you don't have to pay to use it but, you can makes a donation to the author using paypal by sending him a gift directly to his paypal account : cordierfr(at)wanadoo(dot)fr
-It will be greatly appreciated and will motivate me for planed improvements and more.
